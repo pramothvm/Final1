@@ -9,12 +9,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features={"src/test/resources/features"},
-        tags = "@wer",
+        tags = "@wer or @testing2",
         glue= {"stepdefinition"},
         dryRun = false,
 //       plugin ={ "pretty","json:target/cucumber-reports/AutoumationReport/priscillareports.json"
         plugin ={ "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 //                "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm",
+                "pretty","json:target/cucumber-reports/AutoumationReport/priscillareports.json",
                 "html:target/cucumber-reports/reports.html"
                 //"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/AutomationReports/EDBCreditCards.html"
                },
