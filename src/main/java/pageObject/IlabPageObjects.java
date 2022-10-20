@@ -92,8 +92,9 @@ public class IlabPageObjects extends BaseClass {
 
 
 	public boolean clickCareeLink() throws InterruptedException{
+		seleniumAdaptor.pauseFor(50);
 		if(seleniumAction.WaitFoElementToBeVisible(careerLnk)){
-			seleniumAction.clickElement(careerLnk);
+//			seleniumAction.clickElement(careerLnk);
 			seleniumAdaptor.JavaScriptClick(careerLnk);
 		return true;
 		}
@@ -106,8 +107,8 @@ public class IlabPageObjects extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(10L, TimeUnit.SECONDS);
 //		seleniumAdaptor.pauseFor(1);
 		String amt = driver.findElement(this.getclickCareeLinkTxt).getText();
-				logger.info("The name is :" + amt);
-//				System.out.println("The name is :" + amt);
+//				logger.info("The name is :" + amt)
+				System.out.println("The name is :" + amt);
 				return amt;
 			}
 

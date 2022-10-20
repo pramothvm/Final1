@@ -128,9 +128,9 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
         ilabPageObjects= new IlabPageObjects(driver);
         seleniumAdaptor=new SeleniumAdaptor(driver);
 
-        putValue("EPN",ilabPageObjects.getclickCareeLinkTxt1());
-        ExtentCucumberAdapter.addTestStepLog("This is good" + getValue("EPN"));
-        validate("", ilabPageObjects.getclickCareeLinkTxt1());
+//        putValue("EPN",ilabPageObjects.getclickCareeLinkTxt1());
+//        ExtentCucumberAdapter.addTestStepLog("This is good" + getValue("EPN"));
+//        validate("", ilabPageObjects.getclickCareeLinkTxt1());
 
         seleniumAdaptor.pauseFor(2);
        Assert.assertTrue("unable to click the careerLink",ilabPageObjects.clickCareeLink());
