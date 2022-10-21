@@ -4,8 +4,6 @@ import base.BaseClass;
 //import org.apache.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.message.LoggerNameAwareMessage;
-import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,6 +36,9 @@ public class IlabPageObjects extends BaseClass {
 	@FindBy(linkText="Career Opportunities")
 	private WebElement  careerLnk;
 
+	@FindBy(xpath="(//a[text()='Career Opportunities'])[1]")
+	private WebElement careerLnk2;
+
 	@FindBy(xpath="//a[text()='Get in Touch']")
 	private WebElement getInTouch;
 	private By getclickCareeLinkTxt = By.xpath("(//a[text()='Career Opportunities'])[1]");
@@ -46,6 +47,12 @@ public class IlabPageObjects extends BaseClass {
 
 	@FindBy(linkText="South Africa")
 	private WebElement SouthAfricaLnk;
+
+	@FindBy(xpath="(//a[text()='Training'])[1]")
+	private WebElement trainingLnk;
+
+	@FindBy(xpath="(//a[text()='contact us'])[1]")
+	private WebElement contactus;
 
 	@FindBy(xpath="(//div[@class='et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light']/div/ul/li/a)[1]")
 	private WebElement firstjoblink;
@@ -127,6 +134,19 @@ public class IlabPageObjects extends BaseClass {
 //				careerLnk.click();
 	}
 
+	public boolean clickcareermouseover() {
+		if(
+				seleniumAction.hoverMouseOverElement(By.xpath("//a[text()='Get in Touch']"))){
+			seleniumAdaptor.pauseFor(2);
+			seleniumAdaptor.JavaScriptClick(careerLnk2);
+			return true;
+		}
+		return  false;
+	}
+
+
+
+
 			public String getclickCareeLinkTxt1(){
 //				seleniumAction.WaitFoElementToBeVisible(getclickCareeLinkTxt);
 		driver.manage().timeouts().implicitlyWait(10L, TimeUnit.SECONDS);
@@ -145,7 +165,22 @@ public class IlabPageObjects extends BaseClass {
 		return  false;
 	}
 
+	public boolean clicktraining() throws InterruptedException{
+		if(seleniumAction.WaitFoElementToBeVisible(trainingLnk)){
+			seleniumAdaptor.JavaScriptClick(trainingLnk);
+			return true;
+		}
+		return  false;
+	}
 
+
+	public boolean clickcontactus() throws InterruptedException{
+		if(seleniumAction.WaitFoElementToBeVisible(contactus)){
+			seleniumAdaptor.JavaScriptClick(contactus);
+			return true;
+		}
+		return  false;
+	}
 
 public boolean swichToFrame(){
 		seleniumAction.SwitchToIframe(iframe);

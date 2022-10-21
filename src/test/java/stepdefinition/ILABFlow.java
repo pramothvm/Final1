@@ -137,7 +137,9 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
 //       Assert.assertTrue("unable to click the careerLink",ilabPageObjects.clickCareeLink());
 
 //        ilabPageObjects.click();
-        ilabPageObjects.GetInTouch();
+
+//        ilabPageObjects.GetInTouch();
+       ilabPageObjects.clickcareermouseover();
         logger.info("career link clicked");
         takeScreenShotNew(this.scenario);
 //        Reporter.addStepLog("The EPN");
@@ -203,6 +205,61 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
         Assert.assertTrue("unable to type in email address",ilabPageObjects.CaptureMsg(msg));
         Assert.assertTrue("unable to type in cell number",ilabPageObjects.TypeCellNum());
     }
+
+    @Given("I want to click training")
+    public void iWantToClickTraining() throws InterruptedException {
+        ilabPageObjects= new IlabPageObjects(driver);
+        seleniumAction=new SeleniumAction(driver);
+        seleniumAdaptor=new SeleniumAdaptor(driver);
+
+        takeScreenShotNew(this.scenario);
+        takeScreenShotNew(this.scenario);
+        Assert.assertTrue("unable to click on the job application",ilabPageObjects.clicktraining());
+
+
+
+
+    }
+
+    @And("I click on contact us")
+    public void iClickOnContactUs() throws InterruptedException {
+
+        ilabPageObjects= new IlabPageObjects(driver);
+        seleniumAction=new SeleniumAction(driver);
+        seleniumAdaptor=new SeleniumAdaptor(driver);
+
+        Assert.assertTrue("unable to click on the job application",ilabPageObjects.clickcontactus());
+
+    }
+
+    @And("I type in my details {string} and {string} {string} {string}")
+    public void iTypeInMyDetailsAnd(String name, String surname, String email, String msg) {
+
+        ilabPageObjects= new IlabPageObjects(driver);
+        seleniumAction=new SeleniumAction(driver);
+        seleniumAdaptor=new SeleniumAdaptor(driver);
+
+
+        takeScreenShotNew(this.scenario);
+        Assert.assertTrue("unable to switch to frame",ilabPageObjects.swichToFrame());
+        seleniumAction.scrollBy("0","1000");
+        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureName(name));
+
+        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureSurname(surname));
+        Assert.assertTrue("unable to type in email address",ilabPageObjects.TypeEmail(email));
+        Assert.assertTrue("unable to type in email address",ilabPageObjects.CaptureMsg(msg));
+        Assert.assertTrue("unable to type in cell number",ilabPageObjects.TypeCellNum());
+        takeScreenShotNew(this.scenario);
+        seleniumAdaptor.pauseFor(4);
+
+    }
+
+
+
+
+
+
+
 }
 
 
