@@ -94,10 +94,14 @@ public class IlabPageObjects extends BaseClass {
 	public boolean clickCareeLink() throws InterruptedException{
 		seleniumAdaptor.pauseFor(5);
 		System.out.println("The careerLnk is not clicked");
-		if(seleniumAction.WaitFoElementToBeVisible(careerLnk)){
+		if(
+//		seleniumAdaptor.JavaScriptClick(careerLnk);
+//				seleniumAction.WaitFoElementToBeVisible(careerLnk)
+		seleniumAction.clickElement(careerLnk)
+		){
 //			seleniumAction.clickElement(careerLnk);
-			System.out.println("The careerLnk is not clicked");
-			seleniumAdaptor.JavaScriptClick(careerLnk);
+//			System.out.println("The careerLnk is not clicked");
+//			seleniumAdaptor.JavaScriptClick(careerLnk);
 			System.out.println("The careerLnk is clicked");
 			System.out.println("The careerLnk is clicked");
 		return true;
