@@ -49,7 +49,8 @@ public class IlabPageObjects extends BaseClass {
 	private WebElement SouthAfricaLnk;
 
 
-	@FindBy(xpath="(//a[text()='Training'])[1]")
+
+	@FindBy(xpath="//a[text()='Training']")
 	private WebElement trainingLnk;
 
 	@FindBy(xpath="(//a[text()='contact us'])[1]")
