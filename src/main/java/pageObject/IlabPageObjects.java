@@ -112,7 +112,9 @@ public class IlabPageObjects extends BaseClass {
 			}
 
 			public void click(){
-				careerLnk.click();
+				seleniumAdaptor.pauseFor(5);
+				seleniumAdaptor.JavaScriptClick(careerLnk);
+//				careerLnk.click();
 			}
 
 
