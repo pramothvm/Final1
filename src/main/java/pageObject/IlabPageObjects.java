@@ -38,6 +38,8 @@ public class IlabPageObjects extends BaseClass {
 	@FindBy(linkText="Career Opportunities")
 	private WebElement  careerLnk;
 
+	@FindBy(xpath="//a[text()='Get in Touch']")
+	private WebElement getInTouch;
 	private By getclickCareeLinkTxt = By.xpath("(//a[text()='Career Opportunities'])[1]");
 
 	private By getValidateMsg = By.xpath("(//label[text()='Please complete all required fields.'])[1]");
@@ -117,6 +119,13 @@ public class IlabPageObjects extends BaseClass {
 //				careerLnk.click();
 			}
 
+	public void GetInTouch(){
+		seleniumAdaptor.pauseFor(5);
+		System.out.println("The getInTouch is not clicked");
+		seleniumAdaptor.JavaScriptClick(getInTouch);
+		System.out.println("The getInTouch is clicked");
+//				careerLnk.click();
+	}
 
 			public String getclickCareeLinkTxt1(){
 //				seleniumAction.WaitFoElementToBeVisible(getclickCareeLinkTxt);

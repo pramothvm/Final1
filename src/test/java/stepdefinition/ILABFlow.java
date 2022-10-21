@@ -135,7 +135,9 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
 
         seleniumAdaptor.pauseFor(2);
 //       Assert.assertTrue("unable to click the careerLink",ilabPageObjects.clickCareeLink());
-        ilabPageObjects.click();
+
+//        ilabPageObjects.click();
+        ilabPageObjects.GetInTouch();
         logger.info("career link clicked");
         takeScreenShotNew(this.scenario);
 //        Reporter.addStepLog("The EPN");
