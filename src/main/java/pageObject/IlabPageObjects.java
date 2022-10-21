@@ -99,6 +99,7 @@ public class IlabPageObjects extends BaseClass {
 			System.out.println("The careerLnk is not clicked");
 			seleniumAdaptor.JavaScriptClick(careerLnk);
 			System.out.println("The careerLnk is clicked");
+			System.out.println("The careerLnk is clicked");
 		return true;
 		}
 		return  false;
