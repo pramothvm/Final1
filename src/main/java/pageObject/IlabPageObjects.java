@@ -48,6 +48,7 @@ public class IlabPageObjects extends BaseClass {
 	@FindBy(linkText="South Africa")
 	private WebElement SouthAfricaLnk;
 
+
 	@FindBy(xpath="(//a[text()='Training'])[1]")
 	private WebElement trainingLnk;
 
@@ -166,7 +167,9 @@ public class IlabPageObjects extends BaseClass {
 	}
 
 	public boolean clicktraining() throws InterruptedException{
-		if(seleniumAction.WaitFoElementToBeVisible(trainingLnk)){
+		if(
+//				seleniumAdaptor.pauseFor(5);
+				seleniumAction.WaitFoElementToBeVisible(trainingLnk)){
 			seleniumAdaptor.JavaScriptClick(trainingLnk);
 			return true;
 		}

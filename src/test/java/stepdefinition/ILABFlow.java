@@ -138,7 +138,7 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
 
 //        ilabPageObjects.click();
 
-//        ilabPageObjects.GetInTouch();
+        ilabPageObjects.GetInTouch();
        ilabPageObjects.clickcareermouseover();
         logger.info("career link clicked");
         takeScreenShotNew(this.scenario);
@@ -214,6 +214,8 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
 
         takeScreenShotNew(this.scenario);
         takeScreenShotNew(this.scenario);
+        seleniumAdaptor.pauseFor(2);
+
         Assert.assertTrue("unable to click on the job application",ilabPageObjects.clicktraining());
 
 

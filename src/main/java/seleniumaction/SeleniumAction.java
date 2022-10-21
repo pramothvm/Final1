@@ -84,7 +84,7 @@ public class SeleniumAction extends BaseClass{
 
     public boolean WaitFoElementToBeVisible(WebElement element) {
         try {
-            wait = new WebDriverWait(driver, 10L);
+            wait = new WebDriverWait(driver, 15L);
             wait.until(ExpectedConditions.visibilityOf(element));
             return true;
         } catch (Exception var3) {
