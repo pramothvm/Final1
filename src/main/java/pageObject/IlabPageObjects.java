@@ -175,9 +175,18 @@ public class IlabPageObjects extends BaseClass {
 			seleniumAdaptor.pauseFor(5);
 			System.out.println("The trainingLnk is not clicked");
 			seleniumAdaptor.JavaScriptClick(trainingLnk);
+			System.out.println("The trainingLnk is clicked");
 			return true;
 		}
 		return  false;
+	}
+
+	public void clicktraining1(){
+		seleniumAdaptor.pauseFor(5);
+		System.out.println("The trainingLnk is not clicked");
+		seleniumAdaptor.JavaScriptClick(trainingLnk);
+		System.out.println("The trainingLnk is clicked");
+//				careerLnk.click();
 	}
 
 

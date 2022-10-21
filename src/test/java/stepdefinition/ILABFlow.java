@@ -216,7 +216,8 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
         takeScreenShotNew(this.scenario);
         seleniumAdaptor.pauseFor(2);
 
-        Assert.assertTrue("unable to click on the training",ilabPageObjects.clicktraining());
+//        Assert.assertTrue("unable to click on the training",  ilabPageObjects.clicktraining1());
+                ilabPageObjects.clicktraining1();
 
 
 
