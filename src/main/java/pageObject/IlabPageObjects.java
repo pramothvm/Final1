@@ -189,6 +189,18 @@ public class IlabPageObjects extends BaseClass {
 //				careerLnk.click();
 	}
 
+	public boolean clicktraining2(){
+		try{
+			seleniumAdaptor.pauseFor(2);
+			System.out.println("The trainingLnk is not clicked");
+			seleniumAdaptor.JavaScriptClick(trainingLnk);
+
+		return true;
+	    } catch(Exception var2) {
+		return false;
+	}
+	}
+
 
 	public boolean clickcontactus() throws InterruptedException{
 		if(seleniumAction.WaitFoElementToBeVisible(contactus)){
@@ -196,6 +208,18 @@ public class IlabPageObjects extends BaseClass {
 			return true;
 		}
 		return  false;
+	}
+
+	public boolean clickcontactus1(){
+		try{
+//			seleniumAdaptor.pauseFor(2);
+			System.out.println("The contactus is not clicked");
+			seleniumAdaptor.JavaScriptClick(contactus);
+			System.out.println("The contactus is clicked");
+			return true;
+		} catch(Exception var2) {
+			return false;
+		}
 	}
 
 public boolean swichToFrame(){
@@ -220,6 +244,21 @@ public boolean swichToFrame(){
 		}
 		return false;
 	}
+
+	public boolean CaptureName1(String name){
+		try{
+//			seleniumAdaptor.pauseFor(2);
+			System.out.println("The inputname is not clicked");
+			seleniumAdaptor.JavaScriptClick(input_name);
+			seleniumAction.clearText(input_name);
+			seleniumAction.typeText(input_name,name);
+			System.out.println("The inputname is clicked");
+
+			return true;
+		} catch(Exception var2) {
+			return false;
+		}
+	}
 	public boolean CaptureSurname(String surName){
 		if(seleniumAction.WaitFoElementToBeVisible(txtSurName)){
 			seleniumAction.typeText(txtSurName,surName);
@@ -227,12 +266,42 @@ public boolean swichToFrame(){
 		}
 		return false;
 	}
+
+	public boolean CaptureSurname1(String surName){
+		try{
+//			seleniumAdaptor.pauseFor(2);
+			System.out.println("The CaptureSurname is not clicked");
+			seleniumAdaptor.JavaScriptClick(txtSurName);
+			seleniumAction.clearText(txtSurName);
+			seleniumAction.typeText(txtSurName,surName);
+			System.out.println("The CaptureSurname is clicked");
+
+			return true;
+		} catch(Exception var2) {
+			return false;
+		}
+	}
 	public boolean CaptureMsg(String msg){
 		if(seleniumAction.WaitFoElementToBeVisible(textAreaMsg)){
 			seleniumAction.typeText(textAreaMsg,msg);
 			return true;
 		}
 		return false;
+	}
+
+	public boolean CaptureMsg1(String msg){
+		try{
+//			seleniumAdaptor.pauseFor(2);
+			System.out.println("The msg is not clicked");
+			seleniumAdaptor.JavaScriptClick(textAreaMsg);
+			seleniumAction.clearText(textAreaMsg);
+			seleniumAction.typeText(textAreaMsg,msg);
+			System.out.println("The msg is clicked");
+
+			return true;
+		} catch(Exception var2) {
+			return false;
+		}
 	}
 	public boolean TypeEmail(String email){
 		if(seleniumAction.WaitFoElementToBeVisible(input_email)){
@@ -244,6 +313,21 @@ public boolean swichToFrame(){
 
 	}
 
+	public boolean TypeEmail1(String email){
+		try{
+//			seleniumAdaptor.pauseFor(2);
+			System.out.println("The email not clicked");
+			seleniumAdaptor.JavaScriptClick(input_email);
+			seleniumAction.clearText(input_email);
+			seleniumAction.typeText(input_email,email);
+			System.out.println("The email is clicked");
+
+			return true;
+		} catch(Exception var2) {
+			return false;
+		}
+	}
+
 	public boolean TypeCellNum(){
 		if(seleniumAction.WaitFoElementToBeVisible(input_phone)){
 			seleniumAction.typeText(input_phone,getCellNumber());
@@ -251,6 +335,21 @@ public boolean swichToFrame(){
 		}
 		return false;
 
+	}
+
+	public boolean TypeCellNum1(){
+		try{
+//			seleniumAdaptor.pauseFor(2);
+			System.out.println("The TypeCellNum1 not clicked");
+			seleniumAdaptor.JavaScriptClick(input_phone);
+			seleniumAction.clearText(input_phone);
+			seleniumAction.typeText(input_phone,getCellNumber());
+			System.out.println("The TypeCellNum1 is clicked");
+
+			return true;
+		} catch(Exception var2) {
+			return false;
+		}
 	}
 
 

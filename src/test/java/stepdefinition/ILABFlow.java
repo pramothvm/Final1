@@ -217,8 +217,8 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
         seleniumAdaptor.pauseFor(2);
 
 //        Assert.assertTrue("unable to click on the training",  ilabPageObjects.clicktraining1());
-                ilabPageObjects.clicktraining1();
-
+//                ilabPageObjects.clicktraining1();
+        Assert.assertTrue("unable to click on the training",  ilabPageObjects.clicktraining2());
 
 
 
@@ -246,12 +246,17 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
         takeScreenShotNew(this.scenario);
         Assert.assertTrue("unable to switch to frame",ilabPageObjects.swichToFrame());
         seleniumAction.scrollBy("0","1000");
-        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureName(name));
 
-        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureSurname(surname));
-        Assert.assertTrue("unable to type in email address",ilabPageObjects.TypeEmail(email));
-        Assert.assertTrue("unable to type in email address",ilabPageObjects.CaptureMsg(msg));
-        Assert.assertTrue("unable to type in cell number",ilabPageObjects.TypeCellNum());
+//        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureName(name));
+        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureName1(name));
+//        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureSurname(surname));
+        Assert.assertTrue("unable to type in the name",ilabPageObjects.CaptureSurname1(surname));
+//        Assert.assertTrue("unable to type in email address",ilabPageObjects.TypeEmail(email));
+        Assert.assertTrue("unable to type in email address",ilabPageObjects.TypeEmail1(email));
+//        Assert.assertTrue("unable to type in email address",ilabPageObjects.CaptureMsg(msg));
+        Assert.assertTrue("unable to type in email address",ilabPageObjects.CaptureMsg1(msg));
+//        Assert.assertTrue("unable to type in cell number",ilabPageObjects.TypeCellNum());
+        Assert.assertTrue("unable to type in cell number",ilabPageObjects.TypeCellNum1());
         takeScreenShotNew(this.scenario);
         seleniumAdaptor.pauseFor(4);
 
