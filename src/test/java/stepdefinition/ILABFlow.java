@@ -219,7 +219,7 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
 //        Assert.assertTrue("unable to click on the training",  ilabPageObjects.clicktraining1());
 //                ilabPageObjects.clicktraining1();
         Assert.assertTrue("unable to click on the training",  ilabPageObjects.clicktraining2());
-
+        ExtentCucumberAdapter.addTestStepLog("The message is  Clicked");
 
 
     }
