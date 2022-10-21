@@ -127,7 +127,8 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
     public void iWantToApplyFromILabSide() throws InterruptedException {
         ilabPageObjects= new IlabPageObjects(driver);
         seleniumAdaptor=new SeleniumAdaptor(driver);
-
+        takeScreenShotNew(this.scenario);
+        takeScreenShotNew(this.scenario);
 //        putValue("EPN",ilabPageObjects.getclickCareeLinkTxt1());
 //        ExtentCucumberAdapter.addTestStepLog("This is good" + getValue("EPN"));
 //        validate("", ilabPageObjects.getclickCareeLinkTxt1());
