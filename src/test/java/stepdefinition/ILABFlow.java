@@ -139,7 +139,7 @@ private static Logger logger = LogManager.getLogger(ILABFlow.class);
 //        ilabPageObjects.click();
 
         ilabPageObjects.GetInTouch();
-       ilabPageObjects.clickcareermouseover();
+//       ilabPageObjects.clickcareermouseover();
         logger.info("career link clicked");
         takeScreenShotNew(this.scenario);
 //        Reporter.addStepLog("The EPN");

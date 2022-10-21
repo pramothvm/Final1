@@ -169,7 +169,10 @@ public class IlabPageObjects extends BaseClass {
 	public boolean clicktraining() throws InterruptedException{
 		if(
 //				seleniumAdaptor.pauseFor(5);
+
 				seleniumAction.WaitFoElementToBeVisible(trainingLnk)){
+			seleniumAdaptor.pauseFor(5);
+			System.out.println("The trainingLnk is  clicked");
 			seleniumAdaptor.JavaScriptClick(trainingLnk);
 			return true;
 		}
