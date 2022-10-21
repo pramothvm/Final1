@@ -172,7 +172,7 @@ public class IlabPageObjects extends BaseClass {
 
 				seleniumAction.WaitFoElementToBeVisible(trainingLnk)){
 			seleniumAdaptor.pauseFor(5);
-			System.out.println("The trainingLnk is  clicked");
+			System.out.println("The trainingLnk is not clicked");
 			seleniumAdaptor.JavaScriptClick(trainingLnk);
 			return true;
 		}

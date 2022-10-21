@@ -21,9 +21,9 @@ Feature: ILab Assessment
 
 
     Given I want to click training
-    And I click on contact us
+#    And I click on contact us
 #    And I type in my personal details "<applicatName>" and "<surname>" "<emailAddress>" "<message>"
-    And I type in my details "<applicatName>" and "<surname>" "<emailAddress>" "<message>"
+#    And I type in my details "<applicatName>" and "<surname>" "<emailAddress>" "<message>"
 #    Then i should be able to submit the application and quite the browser
 
 
