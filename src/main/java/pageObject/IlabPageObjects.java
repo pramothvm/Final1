@@ -98,6 +98,8 @@ public class IlabPageObjects extends BaseClass {
 //		seleniumAdaptor.JavaScriptClick(careerLnk);
 //				seleniumAction.WaitFoElementToBeVisible(careerLnk)
 		seleniumAction.clickElement(careerLnk)
+//		careerLnkcareerLnk.click
+//		seleniumAdaptor.JavaScriptClick(careerLnk);
 		){
 //			seleniumAction.clickElement(careerLnk);
 //			System.out.println("The careerLnk is not clicked");
@@ -107,6 +109,10 @@ public class IlabPageObjects extends BaseClass {
 		return true;
 		}
 		return  false;
+			}
+
+			public void click(){
+				careerLnk.click();
 			}
 
 
