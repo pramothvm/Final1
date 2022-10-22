@@ -2,8 +2,11 @@ package pageObject;
 
 import base.BaseClass;
 //import org.apache.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +24,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class IlabPageObjects extends BaseClass {
 //   WebDriver driver;
 
-	private static Logger logger = LogManager.getLogger(IlabPageObjects.class);
+//	private static Logger logger = LogManager.getLogger(IlabPageObjects.class);
+	private static Logger loggerObj = LogManager.getLogger(IlabPageObjects.class);
 	public static HashMap<String, String> storeValue = new HashMap<>();
 
 	public IlabPageObjects(WebDriver driver)
@@ -186,6 +190,8 @@ public class IlabPageObjects extends BaseClass {
 		System.out.println("The trainingLnk is not clicked");
 		seleniumAdaptor.JavaScriptClick(trainingLnk);
 		System.out.println("The trainingLnk is clicked");
+		loggerObj.debug("Print Logger");
+		loggerObj.info("Print Logger");
 //				careerLnk.click();
 	}
 
@@ -194,6 +200,8 @@ public class IlabPageObjects extends BaseClass {
 			seleniumAdaptor.pauseFor(2);
 			System.out.println("The trainingLnk is not clicked");
 			seleniumAdaptor.JavaScriptClick(trainingLnk);
+//			loggerObj.debug("Print Logger");
+			loggerObj.info("The trainingLnk is clicked");
 
 		return true;
 	    } catch(Exception var2) {
